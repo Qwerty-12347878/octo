@@ -16,6 +16,7 @@ import CreateEmployee from "./pages/CreateEmployee";
 import DashboardLayout from "./components/layout/DashboardLayout";
 import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";  // ✅ Register page
+import AdminGenerateLink from "./pages/AdminGenerateLink";
 
 const queryClient = new QueryClient();
 
@@ -83,9 +84,13 @@ const AppContent = () => {
                 </ProtectedRoute>
               }
             >
+     
+              
               <Route index element={<Dashboard />} />
               <Route path="employees" element={<Employees />} />
               <Route path="employees/create" element={<CreateEmployee />} />
+              <Route path="AdminGenerateLink" element={<AdminGenerateLink />} />
+            
             </Route>
 
             {/* 404 */}
